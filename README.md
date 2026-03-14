@@ -1,20 +1,35 @@
-# 📘 My Programming Learning Journey
+# 🧠 Competitive Programming Practice
 
-This repository contains my notes, code, and practice exercises from various programming resources and courses. It includes work in languages like C, Python, and more as I continue exploring computer science languages and areas.
+This repository contains my **Competitive Programming (CP) practice**, including problem solutions, algorithm implementations, and practice sheets from various platforms.
 
----
-
-## 📂 Contents
-
-- **cs50x/** – Solutions and experiments from Harvard’s CS50x course.
-- **c-modern-approach/** – Exercises, programs, and projects from the book *C Programming: A Modern Approach*.
-- **python-course/** – Tutorial notes and example code from my Python learning journey.
-- **libcs50/** – CS50 helper library (included as a submodule or reference).
+It serves as a structured archive of my CP journey and progress.
 
 ---
 
 ## 🎯 Purpose
 
-This repository serves as a centralized location for organizing my learning materials and tracking my growth as a programmer. It is intended for personal reference and sharing with peers or mentors interested in my development.
+This repository helps me:
 
-Contributions and feedback are welcome!
+* Track my **Competitive Programming progress**
+* Practice **problem-solving and algorithmic thinking**
+* Maintain a **structured archive of solved problems**
+* Prepare for **contests such as ICPC and online competitions**
+
+---
+
+## 🛠 Languages
+
+Problems are mainly solved using:
+
+* **C++** (primary language for CP)
+* **C**
+
+---
+
+## 🚀 Goal
+
+To continuously improve problem-solving skills and algorithmic knowledge through consistent practice on competitive programming platforms.
+
+---
+
+⭐ This repository will continue growing as I solve more problems.
