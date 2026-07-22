@@ -37,29 +37,23 @@ void fastIO() {
 }
 
 void solve() {
-    int n;
-    cin >>n;
-    vector<int>a(n);
-    for (int &x:a) cin>>x;    
-    vector<int>ans;
-    int l = 0;
-    for (int i=0; i<n; i++) {
-        if (i==n-1 || a[i]!=a[i+1]) {
-            int len=i-l+1;
-            if (len==1) {
-                cout << -1 <<endl;
-                return;
-            }
-            ans.pb(i+1);
-            for (int j=l; j<i; j++) {
-                ans.pb(j+1);
-            }
-            l=i+1;
-        }
-    } 
-    for (int x:ans) cout << x <<" ";
-    cout << endl;
-    return;
+    int n, m, x, y;
+    cin >> n>>m>>x>>y;
+    vector<int>a(n), b(m);
+    for (int &Y:a) cin>>Y;
+    for (int &X:b) cin>>X;
+    sort(all(a));
+    sort(all(b));
+    ll ans=0;
+    for (int Y:a) {
+        if (Y<y) ans++;
+        else break;
+    }
+    for (int X:b) {
+        if (X<x) ans++;
+        else break;
+    }
+    cout << ans << endl;
 }
 
 int main() {

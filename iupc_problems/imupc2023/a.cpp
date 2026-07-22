@@ -36,30 +36,16 @@ void fastIO() {
     cin.tie(nullptr);
 }
 
+ll getsum(ll l, ll n) {
+    return n*(l+n-1);
+}
+
 void solve() {
-    int n;
-    cin >>n;
-    vector<int>a(n);
-    for (int &x:a) cin>>x;    
-    vector<int>ans;
-    int l = 0;
-    for (int i=0; i<n; i++) {
-        if (i==n-1 || a[i]!=a[i+1]) {
-            int len=i-l+1;
-            if (len==1) {
-                cout << -1 <<endl;
-                return;
-            }
-            ans.pb(i+1);
-            for (int j=l; j<i; j++) {
-                ans.pb(j+1);
-            }
-            l=i+1;
-        }
-    } 
-    for (int x:ans) cout << x <<" ";
-    cout << endl;
-    return;
+    ll l, r;
+    cin>>l>>r;
+    ll n = (r/2) - ((l-1)/2);
+    if (l%2!=0) l++;
+    cout << getsum(l,n) << endl;
 }
 
 int main() {

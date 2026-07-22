@@ -38,27 +38,23 @@ void fastIO() {
 
 void solve() {
     int n;
-    cin >>n;
+    cin>>n;
     vector<int>a(n);
-    for (int &x:a) cin>>x;    
-    vector<int>ans;
-    int l = 0;
-    for (int i=0; i<n; i++) {
-        if (i==n-1 || a[i]!=a[i+1]) {
-            int len=i-l+1;
-            if (len==1) {
-                cout << -1 <<endl;
-                return;
+    for (int &x:a) cin>>x;
+    for (int mask=0; mask<(1<<n); mask++) {
+        int angle=0;
+        for (int i=0; i<n; i++) {
+            if ((mask & (1<<i))!=0) {
+                angle+=a[i];
             }
-            ans.pb(i+1);
-            for (int j=l; j<i; j++) {
-                ans.pb(j+1);
-            }
-            l=i+1;
+            else angle-=a[i];
         }
-    } 
-    for (int x:ans) cout << x <<" ";
-    cout << endl;
+        if (((angle%360)+360)%360==0) {
+            cout <<"YES\n";
+            return;
+        }
+    }
+    cout <<"NO\n";
     return;
 }
 
@@ -66,7 +62,6 @@ int main() {
     fastIO();
 
     int T = 1;
-    cin >> T;
     // cin >> T;
 
     while (T--)

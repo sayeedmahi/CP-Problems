@@ -39,27 +39,22 @@ void fastIO() {
 void solve() {
     int n;
     cin >>n;
-    vector<int>a(n);
-    for (int &x:a) cin>>x;    
-    vector<int>ans;
-    int l = 0;
+    string s;
+    cin >>s;
+    int longest=0;
+    int lines=0;
     for (int i=0; i<n; i++) {
-        if (i==n-1 || a[i]!=a[i+1]) {
-            int len=i-l+1;
-            if (len==1) {
-                cout << -1 <<endl;
-                return;
-            }
-            ans.pb(i+1);
-            for (int j=l; j<i; j++) {
-                ans.pb(j+1);
-            }
-            l=i+1;
+        if (s[i]=='#') {
+            lines++;
         }
-    } 
-    for (int x:ans) cout << x <<" ";
-    cout << endl;
-    return;
+        else {
+            longest=max(longest, lines);
+            lines=0;
+        }
+    }
+    longest=max(longest, lines);
+    int ans=(longest+1)/2;
+    cout << ans << endl;
 }
 
 int main() {
